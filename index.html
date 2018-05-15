@@ -20,7 +20,7 @@
             Daniel O'Sullivan - P15217764
           </p>
           <aside class="notes">
-            What's your name & number b
+            Hello my name is Daniel O'Sullivan.
           </aside>
           <a href="?transition=convex#/transitions">Set transition</a>
         </section>
@@ -29,11 +29,18 @@
             <h1>
               Why Did I choose this project?
             </h1>
+            <aside class="notes">
+              My project was to create a instant messaging application that allows a user to organise events much easier.
+            </aside>
           </section>
           <section data-background="#ff7f50">
             <h4>
               My main goals for this project were:
             </h4>
+            <aside class="notes">
+              I had a few different goals that I wanted to achieve from this project. The main one being * to make it easier for users to create and organise their events * and meet new people.
+              Secondly, * I wanted to learn the Swift programming language, as well as * gain experience in a Google API, which I did by using Firebase.
+            </aside>
             <p>
               <ul>
                 <li class="fragment">To make it easier for users to create an event</li>
@@ -55,6 +62,10 @@
             <h4>
               Target
             </h4>
+            <aside class="notes">
+              Apple released its newest version of Swift (Swift 4) in September 2017. This introduced many new features, including having the ability to use llambda's. However, they also *
+              only allowed newer devices that run iOS 11.0.2 or newer. This is an incentive to make people want to buy the newer iDevice.
+            </aside>
             <ul>
               <li class="fragment">Older iOS devices aren't supported.</li>
               <li class="fragment">Any iOS device running at least iOS 11.0.2 works fine.</li>
@@ -63,17 +74,26 @@
         </section>
         <section>
           <section data-background="#ff7f50">
+            <aside class="notes">
+              As far as views are considered, I created several custom views for different aspects of this application.
+            </aside>
           <h1>
             Designs
           </h1>
         </section>
           <section data-background="#ff7f50">
+            <aside class="notes">
+              Here are a couple of examples of custom cells I have created inside of the application. This holds the information for the messages, and displays the users profile picture within. This is placed in the table, and displayed to the user. As well as these, there is also the custom navigation bar that I have created, and the tab bar. These help with the navigation of the application.
+            </aside>
             <h3>
               Custom views
             </h3>
             <img src="customViews.png" alt="custom views"/>
           </section>
           <section data-background="#ff7f50">
+            <aside class="notes">
+              This is the logo for the application. I wanted to create a logo that emphasises the main features of the application - the messages aspect and the calendar aspect. I incorperated both of these into the logo by having a combination of the chat bubble and a calendar.
+            </aside>
             <h3>
               Logo
             </h3>
@@ -84,33 +104,61 @@
               ERD Diagram
             </h3>
             <img src="erd.png" alt="My ERD Diagram"/>
+            <aside class="notes">
+              This is the structure of my Database if it were to be made using MySQL. As you can see, there are 11 tables. This stores all of the information that may be needed by the user.
+            </aside>
           </section>
         </section>
         <section>
           <section data-background="#ff7f50">
+            <aside class="notes">
+              For the backend of my application, I decided to use Firebase. This is because it offers many great features that would improve the usability of the application. This includes Firebase Authentication and storage.
+            </aside>
             <h1>Database</h1>
           </section>
           <section data-background="#ff7f50">
             <h4>Firebase</h4>
-            <a class="fragment" src="https://console.firebase.google.com/u/0/project/chatapp-d087b/database/chatapp-d087b/data">My Database - </a>
-            <a class="fragment" src="https://console.firebase.google.com/u/0/project/chatapp-d087b/storage/chatapp-d087b.appspot.com/files">My Storage - </a>
-            <a class="fragment" src="https://console.firebase.google.com/u/0/project/chatapp-d087b/authentication/users">My Authentication</a>
+            <a class="fragment" src="https://console.firebase.google.com/u/0/project/chatapp-d087b/database/chatapp-d087b/data">My Database </a>
+            <a class="fragment" src="https://console.firebase.google.com/u/0/project/chatapp-d087b/storage/chatapp-d087b.appspot.com/files">- My Storage </a>
+            <a class="fragment" src="https://console.firebase.google.com/u/0/project/chatapp-d087b/authentication/users">- My Authentication</a>
+            <aside class="notes">
+              The database for my application stores all of the user information, event information, messages, and any database connection issues that occur. In order to make sure that the correct messages are downloaded, I used an approach called fanning out. This is where there is a seperate table of user id's with message id's. Using this information, I can target specific messages that I wish to download.
+              *
+              The storage of my application stores all of the user profile pictures. Inside of the database, there is a URL that points to their profile image. This is where the image is downloaded from. The images are uploaded with a unique id as its name, so that the user's privacy is not breached. As well as this, if the user changes their profile picture, the original picture is deleted, before the new image is uploaded, and the database is updated. The image is also deleted when a user deletes their profile.
+              *
+              Finally, I make use of Firebase Authentication. This is a good platform because it allows me to check whether an account has been created with a specific email address before or not. There is loads of really useful functions, such as being able to validate any email address's and passwords. There is also a feature which allows the user to send an email address to themselves if they would like to reset their account's password.
+            </aside>
           </section>
           <section data-background="#ff7f50">
+            <h4>Firebase</h4>
+            <aside class="notes">
+              So why did I choose Firebase? I chose Firebase because it allows you to nest lists into a datatype, which allows you to create much more structured databases. This is a great thing to have, and I have used it a few times. For example, inside of the events table, there is many events. Inside of each event, there is all of its variables, such as title, time, etc. As well as this, there is a location variable, inside of which contains 3 variables; latitude, longitude and a description of where it is. Having this functionality is great because it helps to minimise the time taken to create a backend of an application, and instead allows the developer to concentrate on making a better product.
+              *
+              Another great thing about using Firebase is that the database updates in realtime. This means that when a message is sent to a certain person, their application updates instantly. This is done because when you initially get the messages from the database, you create a reference to the node on the messages table that your messages are stored in. Once you have this reference, you can either check everytime a child is added, a child is removed, or you can just grab the values that are stored. This allows you to easily check for any updates that should be checked.
+              and most importantly, using firebase is * free and easy to use for anybody.
+            </aside>
             <ul>
               <li class="fragment">Tree Structure</li>
-              <li class="fragment">Dynamic</li>
               <li class="fragment">Nested Tables</li>
+              <li class="fragment">Real Time database</li>
               <li class="fragment"><h3>Free</h3></li>
             </ul>
           </section>
         </section>
         <section>
           <section data-background="#ff7f50">
+            <aside class="notes">
+              Another important part of my project is the data strutures that are used within the application.
+            </aside>
             <h1>Data Structures</h1>
           </section>
           <section data-background="#ff7f50">
             <h4>Tuples</h4>
+            <aside class="notes">
+              The main Data structure that I use within this application is the tuple. I use this structure to construct other structures, such as my QuadStructure, which is used to pass the information to my help section inside of the application.
+              My tuple class uses polymorhism. This is good because it then can be used for any other data type.
+            </aside>
+
             <ul>
               <li class="fragment">Polymorphic</li>
               <li class="fragment">Uses Generics</li>
@@ -124,9 +172,14 @@
             <h1>
               Github
             </h1>
+            <aside class="notes">
+              I used Github for my project in order to manage my version control.
+            </aside>
+
           </section>
           <section data-background="#ff7f50">
             <img src="Github.png" alt="My tuple class"/>
+
           </section>
           <section data-background="#ff7f50">
             My Github -> <a href="https://github.com/dosullivan557">dosullivan557</a>
@@ -138,20 +191,32 @@
             <h1>
               Security
             </h1>
+            <aside class="notes">
+              A huge concern of mine, and many other's, when I initially came up with this concept was security. Security is a key part in social media and instant messaging, so having a secure application would mean that the user's information and data is safe.
+            </aside>
           </section>
           <section data-background="#ff7f50">
             <p>All traffic between the device and the database is encrypted</p>
             <img src="#"/>
+            <aside class="notes">
+
+              All of my information is sent through Firebase. This is a good thing because all of this application's packets that get sent back and forth to the database is encrypted, so any packages that do end up being sniffed out, are encrypted so no user information is shown.
+
+            </aside>
+
           </section>
           <section data-background="#ff7f50">
+            <aside class="notes">
+              As well as using Firebase's encryption for any information being sent, I still believed that because the information is stored in plain text in the database, it would be good to have this encrypted as well. Therefore, I created a vignère cipher which encrypts the messages. I take the unique message id, perform alterations to it, and then use that as the key for each message's key. Each key can vary in length as well; between 12 and 15 characters long. The fact that the key is different each time, means that brute forcing it becomes exponentially harder. By using the formula * Here, I was able to calculate how many possible key combinations there would be for each length, and by calculating this, * I was then able to figure out how long it would take to crack the code.
+            </aside>
             <p>Vignère Cipher is used</p>
-            <figure>
+            <figure class="fragment">
               <img src="numOfPossibilities.png"/>
               <figcaption>
                 Number of possibile combinations formula
               </figcaption>
             </figure>
-            <figure>
+            <figure class="fragment">
               <img src="secondsToCrack.png"/>
               <figcaption>
                 How long it will take to crack formula
@@ -162,9 +227,16 @@
         <section>
           <section data-background="#ff7f50">
             <h1>Issues & Solutions</h1>
+            <aside class="notes">
+              Throughout this project, there were a couple of issues that I came across. I've listed a couple of them here, but for the full list, see my final report.
+            </aside>
           </section>
           <section data-background="#ff7f50">
             <h4>Issues encountered include:</h4>
+            <aside class="notes">
+              * When creating the encryption, I came across a few issues that caused crashes. Usually, this would be because there would be a nil value.
+              * Another issue was when the custom table cell's image view would flicker. This was caused by too many images being downloaded at once.
+            </aside>
             <ul>
               <li class="fragment">Creating the encryption</li>
               <ul>
@@ -177,6 +249,11 @@
             </ul>
           </section>
           <section data-background="#ff7f50">
+            <aside class="notes">
+              For more sophisticated algorithms, such as the encryption and decryption functionalities, they were written in Java; which is my most proficient language. By writing them in this language, issues were able to be combatted that surfaced by thoroughly testing and working version of the methods, which could then be translated over into Swift. This allowed complex algorithms to be developed much more easily and quickly.
+              *
+              Downloading images from the internet can take a while when there are many of them, especially when they are needed at different times within an application. Therefore, to combat this issue, it was decided to store the images in an NSCache object was the right decision.  This object was given a type of <AnyObject, AnyObject>, so it could be stored as a string and an image. The user's unique id is used as the key for this object and the image as the body. By doing this, the profile image can be checked for a particular user, and if it is, it can set the profile image there. Otherwise, it can be download and added into the cache, so it is there for future usage.
+            </aside>
             <h4>Solutions</h4>
             <ul>
               <li class="fragment">Creating the encryption</li>
@@ -191,6 +268,9 @@
           </section>
         </section>
         <section data-background="#ff7f50">
+          <aside class="notes">
+            Time for a demo of the application
+          </aside>
           <h1>DEMO!</h1>
         </section>
       </div>
