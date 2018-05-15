@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="reveal.css">
+    <link rel="stylesheet" href="sky.css" id="theme">
+    <link rel="stylesheet" href="custom.css" id="theme">
+    <title>Event Organising Application</title>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Home page -->
+        <section data-background="#ff7f50">
+          <h2>
+            Event Organising Application
+          </h2>
+          <img src="icon.png" alt="custom views"/>
+          <p>
+            Daniel O'Sullivan - P15217764
+          </p>
+          <aside class="notes">
+            What's your name & number b
+          </aside>
+          <a href="?transition=convex#/transitions">Set transition</a>
+        </section>
+        <section>
+          <section data-background="#ff7f50">
+            <h1>
+              Why Did I choose this project?
+            </h1>
+          </section>
+          <section data-background="#ff7f50">
+            <h4>
+              My main goals for this project were:
+            </h4>
+            <p>
+              <ul>
+                <li class="fragment">To make it easier for users to create an event</li>
+                <li class="fragment">To make it easier to meet new people</li>
+                <li class="fragment">To Learn the Swift programming language</li>
+                <li class="fragment">To gain experience using a Google API</li>
+              </ul>
+            </p>
+          </section>
+        </section>
+        <section>
+          <section data-background="#ff7f50">
+          <h1>
+            Planning
+          </h1>
+        </section>
+
+          <section data-background="#ff7f50">
+            <h4>
+              Target
+            </h4>
+            <ul>
+              <li class="fragment">Older iOS devices aren't supported.</li>
+              <li class="fragment">Any iOS device running at least iOS 11.0.2 works fine.</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section data-background="#ff7f50">
+          <h1>
+            Designs
+          </h1>
+        </section>
+          <section data-background="#ff7f50">
+            <h3>
+              Custom views
+            </h3>
+            <img src="customViews.png" alt="custom views"/>
+          </section>
+          <section data-background="#ff7f50">
+            <h3>
+              Logo
+            </h3>
+            <img src="icon.png" alt="Logo"/>
+          </section>
+          <section data-background="#ff7f50">
+            <h3>
+              ERD
+            </h3>
+            <img src="erd.png" alt="My ERD Diagram"/>
+          </section>
+        </section>
+        <section>
+          <section data-background="#ff7f50">
+            <h1>Database</h1>
+          </section>
+          <section data-background="#ff7f50">
+            <h4>Firebase</h4>
+            <ul>
+              <li class="fragment">Tree Structure</li>
+              <li class="fragment">Dynamic</li>
+              <li class="fragment">Nested Tables</li>
+              <li class="fragment">Free</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section data-background="#ff7f50">
+            <h1>Data Structures</h1>
+          </section>
+          <section data-background="#ff7f50">
+            <h4>Tuples</h4>
+            <ul>
+              <li class="fragment">Polymorphic</li>
+              <li class="fragment">Uses Generics</li>
+            </ul>
+            <img src="tuple.png" alt="My tuple class"/>
+
+          </section>
+        </section>
+        <section>
+          <section data-background="#ff7f50">
+            <h1>
+              Github
+            </h1>
+          </section>
+          <section data-background="#ff7f50">
+            <img src="Github.png" alt="My tuple class"/>
+          </section>
+          <section data-background="#ff7f50">
+            My Github -> <a href="https://github.com/dosullivan557">dosullivan557</a>
+          </section>
+        </section>
+
+        <section>
+          <section data-background="#ff7f50">
+            <h1>
+              Security
+            </h1>
+          </section>
+          <section data-background="#ff7f50">
+            <p>All traffic between the device and the database is encrypted</p>
+            <img src="#"/>
+          </section>
+          <section data-background="#ff7f50">
+            <p>Vignère Cipher is used</p>
+            <figure>
+              <img src="numOfPossibilities.png"/>
+              <figcaption>
+                Number of possibile combinations formula
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="secondsToCrack.png"/>
+              <figcaption>
+                How long it will take to crack formula
+              </figcaption>
+            </figure>
+          </section>
+        </section>
+        <section>
+          <section data-background="#ff7f50">
+            <h1>Issues & Solutions</h1>
+          </section>
+          <section data-background="#ff7f50">
+            <h4>Issues encountered include:</h4>
+            <ul>
+              <li class="fragment">Creating the encryption</li>
+              <ul>
+                <li class="fragment">Crashes Would often occur due to nil values</li>
+              </ul>
+              <li class="fragment">Image Flickering</li>
+              <ul>
+                <li class="fragment">When downloading and sorting table items, the images would flicker.</li>
+              </ul>
+            </ul>
+          </section>
+          <section data-background="#ff7f50">
+            <h4>Solutions</h4>
+            <ul>
+              <li class="fragment">Creating the encryption</li>
+              <ul>
+                <li class="fragment">Initially Written in Java</li>
+              </ul>
+              <li class="fragment">Image Flickering</li>
+              <ul>
+                <li class="fragment">Cache the images</li>
+              </ul>
+            </ul>
+          </section>
+        </section>
+        <section data-background="#ff7f50">
+          <h1>DEMO!</h1>
+        </section>
+      </div>
+    </div>
+    <section>
+    </section>
+    <script src="reveal.js"></script>
+    <script src="head.min.js"></script>
+    <script src="zoom.js"></script>
+    <script src="notes.js"></script>
+    <script>
+      Reveal.initialize({});
+    </script>
+  </body>
+</html>
