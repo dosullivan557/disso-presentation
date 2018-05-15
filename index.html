@@ -197,7 +197,7 @@
           </section>
           <section data-background="#ff7f50">
             <p>All traffic between the device and the database is encrypted</p>
-            <img src="#"/>
+            <img src="wireshark.png"/>
             <aside class="notes">
 
               All of my information is sent through Firebase. This is a good thing because all of this application's packets that get sent back and forth to the database is encrypted, so any packages that do end up being sniffed out, are encrypted so no user information is shown.
@@ -223,6 +223,41 @@
               </figcaption>
             </figure>
           </section>
+          <section data-background="#ff7f50">
+            <h2>Tabular Tables</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Key Length</th>
+								<th>Possible Combinations</th>
+								<th>Time to crack</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+                <td>12</td>
+								<td>2176782336</td>
+								<td>3.3</td>
+							</tr>
+              <tr>
+                <td>13</td>
+								<td>13060694016</td>
+								<td>19.6</td>
+							</tr>
+              <tr>
+                <td>14</td>
+								<td>78364164096</td>
+								<td>117.5</td>
+							</tr>
+              <tr>
+                <td>15</td>
+								<td>4.70185E+11</td>
+								<td>705.2</td>
+							</tr>
+						</tbody>
+					</table>
+          </section>
+
         </section>
         <section>
           <section data-background="#ff7f50">
@@ -285,7 +320,14 @@
         </section>
         <section data-background="#ff7f50">
           <aside class="notes">
-            Time for a demo of the application
+            Time for a demo of the application:
+            <ul>
+              <li>Register</li>
+              <li>Sending messages</li>
+              <li>Create event</li>
+              <li>Event Conflicting</li>
+              <li>Event Recognisition</li>
+            </ul>
           </aside>
           <h1>DEMO!</h1>
         </section>
