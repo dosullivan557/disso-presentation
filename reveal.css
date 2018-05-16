@@ -1231,7 +1231,8 @@ body {
 .reveal.rtl .slides h5,
 .reveal.rtl .slides h6 {
   direction: rtl;
-  font-family: sans-serif; }
+  font-family: sans-serif; 
+}
 
 .reveal.rtl pre,
 .reveal.rtl code {
@@ -1553,3 +1554,5 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+
